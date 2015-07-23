@@ -49,13 +49,6 @@ client = OAuthClient.new(
 )
 #
 require 'json'
-response = client.get("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10&screen_name=mgalicer")
-tweet_data = JSON.parse(response.body)
 
-maris_tweets = []
-tweet_data.each do |tweet|
-  # maris_tweets << tweet[:text]
-  p tweet["text"]
-end
 
 # p maris_tweets
