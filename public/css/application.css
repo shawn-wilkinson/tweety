@@ -7,3 +7,18 @@
 th {
   text-align: left;
 }
+
+#main-welcome-box{
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 2px 2px 2px gray;
+  text-align: center;
+  padding: 25px;
+}
+
+#main-welcome-box .main-button{
+  border:1px solid blue;
+  display: inline-block;
+  margin:auto;
+  padding:10px;
+}
