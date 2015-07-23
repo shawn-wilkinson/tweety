@@ -4,7 +4,10 @@ sprinkles = Tweeter.create(name:'Sprinkles The Cat', twitter_handle: '@meow_hiss
 janet = Tweeter.create(name:'Janet Janetson', twitter_handle: '@janet_is_cooool')
 lilly = Tweeter.create(name:'Lilly Lava', twitter_handle: '@lilly_tweets_stuff')
 
-test_deck = Deck.create
+
+shawn = User.create(name:'Shawn',password:'dbcpassword')
+
+test_deck = Deck.create(name:"Test Deck", description: "A deck to test if this thing is working...", creator: shawn)
 
 tweeters = [tom,bob,sprinkles,janet,lilly]
 tweeters.each do |tweeter|
@@ -12,3 +15,16 @@ tweeters.each do |tweeter|
 end
 
 new_game = Game.new()
+
+new_game.user = shawn
+
+tweeters.each do |tweeter|
+
+  tweeter.questions << Question.new(game: new_game, tweet_content: "This is a test tweet. The tweeter is: #{tweeter.name}")
+  tweeter.questions << Question.new(game: new_game, tweet_content: "This is a test tweet. The tweeter is: #{tweeter.name}")
+  tweeter.questions << Question.new(game: new_game, tweet_content: "This is a test tweet. The tweeter is: #{tweeter.name}")
+  tweeter.questions << Question.new(game: new_game, tweet_content: "This is a test tweet. The tweeter is: #{tweeter.name}")
+
+end
+
+
