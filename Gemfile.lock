@@ -44,6 +44,7 @@ GEM
     rspec-mocks (2.14.6)
     shotgun (0.9)
       rack (>= 1.0)
+    simple_oauth (0.2.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -76,6 +77,7 @@ DEPENDENCIES
   rake
   rspec
   shotgun
+  simple_oauth
   sinatra
   sinatra-contrib
   thin

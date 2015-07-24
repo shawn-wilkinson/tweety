@@ -3,6 +3,9 @@ require 'bcrypt'
 class User < ActiveRecord::Base
   include BCrypt
 
+  has_many :games
+  has_many :decks
+
   def password= (password_string)
     @password = BCrypt::Password.create(password_string)
     self.password_hash = @password

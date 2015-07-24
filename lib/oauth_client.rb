@@ -41,14 +41,26 @@ end
 
 # sample usage:
 #
-client = OAuthClient.new(
-  consumer_key: ENV["TWITTER_CONSUMER_KEY"],
-  consumer_secret: ENV["TWITTER_CONSUMER_SECRET"],
-  token: ENV["TWITTER_TOKEN"],
-  token_secret: ENV["TWITTER_TOKEN_SECRET"]
+CLIENT = OAuthClient.new(
+  # consumer_key: ENV["TWITTER_CONSUMER_KEY"],
+  consumer_key: "vVA0YwBHJ9lESfg5jOlDW8ycc",
+  # consumer_secret: ENV["TWITTER_CONSUMER_SECRET"],
+  consumer_secret: "Ipgt9WFv9shcXVJ3nVR8vcKHuSJ03gS0wwWikYKZqbcbfVtIDD",
+  # token: ENV["TWITTER_TOKEN"],
+  token: "2538360812-WvVyZ8gLKwNQsvTdvgOEaJooqquFfn4bBha7DgF",
+  # token_secret: ENV["TWITTER_TOKEN_SECRET"]
+  token_secret: "ssTtPXwJZwPgxrkbV2tLH3RXHNlnEbAFPwyG8s7y8upSK"
 )
 #
-require 'json'
 
 
-# p maris_tweets
+# response = client.get("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10&screen_name=mgalicer")
+# tweet_data = JSON.parse(response.body)
+
+# tweets = []
+# tweet_data.each do |tweet|
+#   tweets << tweet["text"]
+# end
+# p tweets
+
+# # p maris_tweets
