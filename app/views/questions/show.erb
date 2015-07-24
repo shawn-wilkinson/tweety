@@ -1,0 +1,25 @@
+
+<div id="display-question-tweet">
+  <h4><em>@question.tweet_content</em></h4>
+</div>
+
+
+<div id="options">
+  <% @question.tweet_options.each do |option| %>
+    <a href="questions/guess"><article class ="guess-option-box">
+      <h4><%= option.name %></h4>
+      <p><%= option.twitter_handle %></p>
+    </article></a>
+  <% end %>
+</div>
+
+
+<div id="result-display">
+  <% if @question.correct? %>
+    <p> You got it right! </p>
+    <a href="games/session[:game_id]/next_question">Next Question</a>
+  <% else %>
+    <p>Incorrect. The correct answer was <%= @question.tweeter.name %></p>
+    <a href="games/session[:game_id]/next_question">Next Question</a>
+  <% end %>
+</div>

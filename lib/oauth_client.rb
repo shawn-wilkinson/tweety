@@ -42,14 +42,10 @@ end
 # sample usage:
 #
 CLIENT = OAuthClient.new(
-  # consumer_key: ENV["TWITTER_CONSUMER_KEY"],
-  consumer_key: "vVA0YwBHJ9lESfg5jOlDW8ycc",
-  # consumer_secret: ENV["TWITTER_CONSUMER_SECRET"],
-  consumer_secret: "Ipgt9WFv9shcXVJ3nVR8vcKHuSJ03gS0wwWikYKZqbcbfVtIDD",
-  # token: ENV["TWITTER_TOKEN"],
-  token: "2538360812-WvVyZ8gLKwNQsvTdvgOEaJooqquFfn4bBha7DgF",
-  # token_secret: ENV["TWITTER_TOKEN_SECRET"]
-  token_secret: "ssTtPXwJZwPgxrkbV2tLH3RXHNlnEbAFPwyG8s7y8upSK"
+  consumer_key: ENV["TWITTER_CONSUMER_KEY"]
+  consumer_secret: ENV["TWITTER_CONSUMER_SECRET"],
+  token: ENV["TWITTER_TOKEN"],
+  token_secret: ENV["TWITTER_TOKEN_SECRET"]
 )
 #
 

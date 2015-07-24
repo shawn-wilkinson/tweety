@@ -12,7 +12,6 @@ class Game < ActiveRecord::Base
   has_many :tweeters, through: :inclusions
   has_many :questions
 
-# WRITE supply_tweets method for tweeter (instance method)
   def supply_tweets(person)
     response = CLIENT.get("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10&screen_name=#{person.twitter_handle}")
     tweet_data = JSON.parse(response.body)
