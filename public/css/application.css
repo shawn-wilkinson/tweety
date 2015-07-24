@@ -1,24 +1,73 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  background-color: #192B33;
 }
+
+.container {
+  width: 66%;
+  height: 800px;
+  margin: auto;
+  margin-top: 100px;
+}
+
 th {
   text-align: left;
 }
 
 #main-welcome-box{
-  margin: auto;
-  border: 1px solid black;
-  box-shadow: 2px 2px 2px gray;
+  margin-top: 150px;
   text-align: center;
   padding: 25px;
+/*  background-color: #FFFFFF;*/
+}
+
+#main-welcome-box h1{
+  font-family: 'Homemade Apple', cursive;
+  font-size: 90px;
+  color: white;
 }
 
 #main-welcome-box .main-button{
-  border:1px solid blue;
   display: inline-block;
   margin:auto;
   padding:10px;
+  background-color: #CCCC52;
+  color: #192B33;
+}
+#welcome {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-family: 'Homemade Apple', cursive;
+}
+
+#deck-display {
+  text-align: center;
+  margin: auto;
+  background-color: #CCCC52;
+  width: 40%;
+  padding: 15px;
+  margin-top: 10%;
+}
+
+.footer {
+  margin-bottom: 0px;
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+  background-color: #CCCC52;
+  width: 40%;
+}
+
+.guess-option-box {
+  color: black;
+  background-color: #FFD933;
+}
+
+#display-question-tweet {
+  background-color: #FFD933;
+  padding: 10px;
+}
+
+#deck-display h1{
+  font-family: 'Homemade Apple', cursive;
 }

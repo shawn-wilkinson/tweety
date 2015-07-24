@@ -43,7 +43,8 @@ end
 
 get '/users/:id/profile' do
   @user = User.find(params[:id])
-  if current_user = @user
+  @decks = Deck.all
+  if current_user == @user
     erb :"users/profile"
   else
     redirect "/"
