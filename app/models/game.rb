@@ -34,4 +34,27 @@ class Game < ActiveRecord::Base
     end
   end
 
+  def total_questions
+    self.questions.length
+  end
+
+  def total_correct
+    # correct = self.questions.select{|question| p question if question.correct?}
+    # correct.length
+    correct_questions = []
+    p self.questions
+    self.questions.each do |question|
+      if question.correct?
+        correct_questions << question
+      end
+    end
+    correct_questions.length
+  end
+
+  def percentage_correct
+    num = ((self.total_correct.to_f / self.total_questions) * 100).to_i
+    return num.to_s + "%"
+  end
+
+
 end

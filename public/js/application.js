@@ -35,27 +35,22 @@ $(document).ready(function() {
 
   });
 
+// for guessiong
+  $("#next_question").hide()
 
-
-
-
-
-
-
-//   var requestUrl = $(this).attr("href");
-//     var reqeust = $.ajax({
-//       url: requestUrl
-//     });
-//     request.done(function(response){
-//       console.log(response);
-//     });
-
-
-
-
-
-
-
+  $(".guess-option-box").on('click', function(event){
+    event.preventDefault();
+    var guess_option = $(this)
+    console.log(guess_option)
+    request = $.ajax({
+      url: guess_option.attr('href'),
+      method: "post"
+    });
+    request.done(function(response){
+      $(".evaluation_box").append(response)
+      $("#next_question").show()
+    })
+  })
 
 
 });
