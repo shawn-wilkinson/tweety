@@ -2,8 +2,15 @@
 <p>This is your profile!</p>
 <a href ="/users/logout">Log Out</a>
 
+<div id="deck-display">
+  <h3>Play A Deck</h3>
+  <% @decks.each do |deck| %>
+    <p><%= deck.name %></p>
+    <p><%= deck.description %></p>
+    <a href="games/new/<%=deck.id%>">Play This Deck</a>
+  <% end %>
+</div>
 
-<h3>Play A Deck</h3>
 
 <!-- links to decks to play new games  -->
 <!-- <a href="/games/:deck_id/new">Play this game!</a> -->

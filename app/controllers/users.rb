@@ -12,6 +12,7 @@ post '/users/new' do
   @user = User.create(params[:user])
   if @user.save
     session[:user_id] = @user.id
+    @decks = Deck.all
     redirect "/users/#{@user.id}/profile"
   else
     redirect "/"
@@ -29,6 +30,7 @@ end
 post '/users/login' do
   if @user = User.authenticate(params[:user][:name],params[:user][:password])
     session[:user_id] = @user.id
+    @decks = Deck.all
     redirect "/users/#{@user.id}/profile"
   end
   redirect "/"
