@@ -19,6 +19,8 @@ gem 'rake'
 gem 'shotgun'
 gem 'bcrypt'
 
+gem 'simple_oauth'
+
 group :test do
   gem 'faker'
   gem 'rspec'

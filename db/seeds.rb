@@ -27,4 +27,10 @@ tweeters.each do |tweeter|
 
 end
 
+dbc_deck = Deck.create(name:"DBC STAFF")
+dbc_deck.tweeters << Tweeter.create(name: "Matt Baker", twitter_handle: "mattbaker")
+dbc_deck.tweeters << Tweeter.create(name: "Mike Busch", twitter_handle: "mikelikesbikes")
+dbc_deck.tweeters << Tweeter.create(name: "Casey Cumbow", twitter_handle: "case_eee")
+dbc_deck.tweeters << Tweeter.create(name: "Duke Greene", twitter_handle: "dukegreene")
+
 
