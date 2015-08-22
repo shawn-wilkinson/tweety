@@ -1,4 +1,4 @@
-
+guest = User.create(name:"Guest Player" , password:"playasguest")
 tweeters = []
 dbc_deck = Deck.create(name:"DBC STAFF", description: "Make fun of your favorite DBC staff")
 tweeters << Tweeter.create(name: "Matt", twitter_handle: "mattbaker")

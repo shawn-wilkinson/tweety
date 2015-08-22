@@ -37,6 +37,14 @@ post '/users/login' do
   redirect "/"
 end
 
+get '/users/login/guest' do
+  @user = User.find(1)
+  current_user = @user
+  session[:user_id] = @user.id
+  @decks = Deck.all
+  redirect "/users/#{@user.id}/profile"
+end
+
 get '/users/logout' do
   session[:user_id] = nil
   redirect "/"
