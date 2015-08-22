@@ -6,6 +6,7 @@ get '/users/new' do
     p 'user created!'
     erb :"users/_new", layout: false, locals: {user: @user}
   end
+  p 'exiting route'
 end
 
 post '/users/new' do
