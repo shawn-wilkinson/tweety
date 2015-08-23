@@ -41,7 +41,7 @@ $(document).ready(function() {
   $(".guess-option-box").on('click', function(event){
     event.preventDefault();
     var guess_option = $(this)
-    console.log(guess_option)
+    console.log(guess_option.attr('href'))
     request = $.ajax({
       url: guess_option.attr('href'),
       method: "post"

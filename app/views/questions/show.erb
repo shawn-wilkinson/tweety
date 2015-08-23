@@ -17,19 +17,19 @@
 
   <div id="options">
     <% @question.tweet_options.each do |option| %>
-
     <div class="row">
       <div class="col s12 m6">
-        <div class="guess-option-box card grey lighten-1">
+        <div class="card grey lighten-1">
           <div class="card-content white-text">
             <span class="card-title">
-              <a href="/questions/guess/<%= option.id %>"><%= option.name %></a>
+              <a class="guess-option-box" href="/questions/guess/<%= option.id %>"><%= option.name %></a>
             </span>
             <p><%= option.twitter_handle %></p>
           </div>
         </div>
       </div>
     </div>
+
     <% end %>
   </div>
 
