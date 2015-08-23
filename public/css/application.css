@@ -71,3 +71,13 @@ th {
   font-family: 'Homemade Apple', cursive;
 }
 */
+
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
+
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+  color: white;
+  font-size:23px;
+  margin-right:10px;
+}
