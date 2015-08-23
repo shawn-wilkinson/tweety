@@ -1,6 +1,7 @@
 get '/games/new/:deck_id' do
   deck = Deck.find(params[:deck_id])
   game = Game.create(deck: deck, user: current_user)
+  @user = current_user
   game.populate_questions
   session[:question_id] = game.questions.first.id
   session[:game_id] = game.id
@@ -13,7 +14,6 @@ post '/questions/guess/:tweeter_id' do
   question = Question.find(session[:question_id])
   question.guessed_tweeter = guessed_tweeter
   question.save
-  # question.set_guess(guessed_tweeter)
   actual_tweeter = question.tweeter
 
   if request.xhr?
@@ -34,6 +34,7 @@ get '/games/:game_id/next_question' do
     erb :"/games/results"
   else
     @question = Question.find(session[:question_id])
+    @user = current_user
     erb :'questions/show'
   end
 end

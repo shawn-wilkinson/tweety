@@ -89,6 +89,7 @@ tweeters << Tweeter.create(name:"Anna  Kendrick", twitter_handle:"AnnaKendrick47
 tweeters << Tweeter.create(name:"Sofia Vergara", twitter_handle:"SofiaVergara")
 tweeters << Tweeter.create(name:"Kevin Spacey", twitter_handle:"KevinSpacey")
 tweeters << Tweeter.create(name:"Hugh Jackman", twitter_handle:"RealHughJackman")
+
 tweeters.each do |person|
   Inclusion.create(deck: movie_stars, tweeter: person)
 end
