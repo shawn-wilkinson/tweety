@@ -21,7 +21,7 @@ gem 'bcrypt'
 
 gem 'simple_oauth'
 
-gem 'postgresql'
+gem 'pg'
 
 group :test do
   gem 'faker'
