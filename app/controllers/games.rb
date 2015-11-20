@@ -9,6 +9,11 @@ get '/games/new/:deck_id' do
   erb :'questions/show'
 end
 
+get '/games/results/:id' do
+  @game = Game.find(params[:id])
+  erb :'games/results'
+end
+
 post '/questions/guess/:tweeter_id' do
   guessed_tweeter = Tweeter.find(params[:tweeter_id])
   question = Question.find(session[:question_id])

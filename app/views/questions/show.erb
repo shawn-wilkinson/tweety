@@ -2,35 +2,35 @@
   <div>
     <a href="/users/<%= @user.id %>/profile" class="brand-logo thin"><%= @user.name %></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href ="/games/results">End game</a></li>
+      <li><a href ="/games/results/<%=session[:game_id]%>">End game</a></li>
       <li><a href ="/users/logout">Log Out</a></li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
-  <h4 class="thin">Guess this tweet!</h4>
-  <div id="display-question-tweet">
-    <h2><em>"<%= @question.tweet_content %>"</em></h2>
+  <h4 class="thin">Guess this tweet:</h4>
+  <div id="display-question-tweet orange">
+    <h5><em>"<%= @question.tweet_content %>"</em></h5>
   </div>
 
 
   <div id="options">
-    <% @question.tweet_options.each do |option| %>
     <div class="row">
+    <% @question.tweet_options.each do |option| %>
+
       <div class="col s12 m6">
-        <div class="card grey lighten-1">
+        <div class="card orange lighten-2">
           <div class="card-content white-text">
             <span class="card-title">
               <a class="guess-option-box" href="/questions/guess/<%= option.id %>"><%= option.name %></a>
             </span>
-            <p><%= option.twitter_handle %></p>
+            <p>@<%= option.twitter_handle %></p>
           </div>
         </div>
       </div>
-    </div>
-
     <% end %>
+  </div>
   </div>
 
   <div class="evaluation_box"></div>

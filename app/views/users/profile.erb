@@ -8,26 +8,23 @@
 </nav>
 
 <div class="container">
-  <h4><i>Choose a deck to play!</i></h4>
-
+  <h4 >Choose a deck to play!</h4>
+    <div class="row">
     <% @decks.each do |deck| %>
-      <div class="row">
+
         <div class="col s12 m6">
-          <div class="card grey lighten-1">
+          <div id="deck-option" class="card orange lighten-2">
             <div class="card-content white-text">
               <span class="card-title">
-                <%= deck.name %>
+                <p><%= deck.name %></p>
+                <a href="/games/new/<%=deck.id%>">play</a>
               </span>
-              <p><%= deck.description %></p>
-            </div>
-            <div class="card-action">
-              <a href="/games/new/<%=deck.id%>">play</a>
             </div>
           </div>
         </div>
-      </div>
-    <% end %>
 
+    <% end %>
+    </div>
 
 </div>
 

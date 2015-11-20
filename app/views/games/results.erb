@@ -1,6 +1,6 @@
-<div id="deck-display">
-  <h1>Great game, <%= current_user.name %></h1>
-  <h3> Here are your results: </h3>
+<div id="result-display" class="card orange lighten-2">
+  <h4>Great game, <%= current_user.name %></h4>
+  <h5> Here are your results: </h5>
 
   <p>Out of <%= @game.total_questions %>, you answered <%= @game.total_correct %> correctly!</p>
   <p> That's <%= @game.percentage_correct %>! Great job.</p>

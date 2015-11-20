@@ -1,18 +1,18 @@
 guest = User.create(name:"Guest Player" , password:"playasguest")
-tweeters = []
-dbc_deck = Deck.create(name:"DBC STAFF", description: "Make fun of your favorite DBC staff")
-tweeters << Tweeter.create(name: "Matt", twitter_handle: "mattbaker")
-tweeters << Tweeter.create(name: "Mike", twitter_handle: "mikelikesbikes")
-tweeters << Tweeter.create(name: "Casey", twitter_handle: "case_eee")
-tweeters << Tweeter.create(name: "Duke", twitter_handle: "dukegreene")
-tweeters << Tweeter.create(name: "Courtney", twitter_handle:"courtneyU88")
-tweeters << Tweeter.create(name: "Alyssa", twitter_handle: "alycit")
-tweeters << Tweeter.create(name: "Lucas", twitter_handle: "ltw_")
-tweeters << Tweeter.create(name: "Leon", twitter_handle: "rubybuddha")
-tweeters << Tweeter.create(name: "Isaac", twitter_handle: "j12coder")
-tweeters.each do |person|
-  Inclusion.create(deck: dbc_deck, tweeter: person)
-end
+# tweeters = []
+# dbc_deck = Deck.create(name:"DBC STAFF", description: "Make fun of your favorite DBC staff")
+# tweeters << Tweeter.create(name: "Matt", twitter_handle: "mattbaker")
+# tweeters << Tweeter.create(name: "Mike", twitter_handle: "mikelikesbikes")
+# tweeters << Tweeter.create(name: "Casey", twitter_handle: "case_eee")
+# tweeters << Tweeter.create(name: "Duke", twitter_handle: "dukegreene")
+# tweeters << Tweeter.create(name: "Courtney", twitter_handle:"courtneyU88")
+# tweeters << Tweeter.create(name: "Alyssa", twitter_handle: "alycit")
+# tweeters << Tweeter.create(name: "Lucas", twitter_handle: "ltw_")
+# tweeters << Tweeter.create(name: "Leon", twitter_handle: "rubybuddha")
+# tweeters << Tweeter.create(name: "Isaac", twitter_handle: "j12coder")
+# tweeters.each do |person|
+#   Inclusion.create(deck: dbc_deck, tweeter: person)
+# end
 
 tweeters = []
 pop_stars = Deck.create(name:"Pop Stars", description: "A collection of current popular musicicans")
