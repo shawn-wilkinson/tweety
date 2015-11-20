@@ -20,17 +20,20 @@ class Game < ActiveRecord::Base
     tweet_data.each do |tweet|
       tweets << tweet["text"]
     end
-    tweets
+    tweets.sample(2)
   end
 
   def populate_questions
+    tweet_content_array = []
     self.deck.tweeters.each do |person|
-      tweet_array = supply_tweets(person)
-        2.times do
-          first_tweet = tweet_array.sample
-          tweet_array.delete(first_tweet)
-          Question.create(tweet_content:first_tweet,tweeter:person,game:self)
-        end
+      tweets = supply_tweets(person)
+      tweets.each do |content|
+        tweet_content_array << [content,person]
+      end
+    end
+    tweet_content_array.shuffle!
+    tweet_content_array.each do |content_and_author|
+      Question.create(tweet_content:content_and_author[0],tweeter:content_and_author[1],game:self)
     end
   end
 
