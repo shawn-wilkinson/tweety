@@ -24,15 +24,18 @@ class Game < ActiveRecord::Base
   end
 
   def populate_questions
-    tweet_content_array = []
+    tweet_array = []
     self.deck.tweeters.each do |person|
       tweets = supply_tweets(person)
       tweets.each do |content|
-        tweet_content_array << [content,person]
+        tweet_array << [content,person]
       end
     end
-    tweet_content_array.shuffle!
-    tweet_content_array.each do |content_and_author|
+    tweet_array.shuffle!
+    if tweet_array.length > 20
+      tweet_array = tweet_array.first(20)
+    end
+    tweet_array.each do |content_and_author|
       Question.create(tweet_content:content_and_author[0],tweeter:content_and_author[1],game:self)
     end
   end
